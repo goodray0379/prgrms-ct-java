@@ -1,10 +1,12 @@
+//1-1.하샤드 수
+//https://programmers.co.kr/learn/courses/30/lessons/12947
 class Solution {
-  public boolean solution(int x) {
-      char[] nums = Integer.toString(x).toCharArray();
-      int sum=0;
-      for(int i=0; i<nums.length; i++)
-          sum += nums[i] - '0';
-      if(x%sum==0) return true;
-      else return false;
-  }
+    public boolean solution(int x) {
+        String s = Integer.toString(x);
+        int sum = 0;
+        for(int i=0; i<s.length(); i++)
+            sum += s.charAt(i)-48;
+        
+        return x%sum==0?true:false;
+    }
 }
