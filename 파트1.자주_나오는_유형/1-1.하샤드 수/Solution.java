@@ -1,6 +1,6 @@
-//2019.10.01 Test
-
-public class Solution {
+//1-1.하샤드 수
+//https://programmers.co.kr/learn/courses/30/lessons/12947
+class Solution {
     public boolean solution(int x) {
         String s = Integer.toString(x);
         int sum = 0;
