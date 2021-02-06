@@ -1,15 +1,17 @@
+//1-3 ë°©ë¬¸ê¸¸ì´
+//https://programmers.co.kr/learn/courses/30/lessons/49994
 import java.util.*;
 
 class Solution {
     public int solution(String dirs) {
-        
+
         int answer = 0;
         char[] command = dirs.toCharArray();
         Set<String> check = new HashSet<>();
-        int x=0; int y=0; int mx=0; int my=0; //±âÁ¸ x,yÁÂÇ¥¿Í ¿òÁ÷ÀÎ ÈÄ x,yÁÂÇ¥
-        
+        int x=0; int y=0; int mx=0; int my=0; //ê¸°ì¡´ x,yì¢Œí‘œì™€ ì›€ì§ì¸ í›„ x,yì¢Œí‘œ
+
         for(int i=0; i<command.length; i++){
-            //½Ã¹Ä·¹ÀÌ¼Ç ±¸¼º
+            //ì‹œë®¬ë ˆì´ì…˜ êµ¬ì„±
             switch(command[i]){
                 case 'U': if(y<5) my++;
                     break;
@@ -23,7 +25,7 @@ class Solution {
             if(x==mx&&y==my)
                 continue;
             else{
-                //¿òÁ÷ÀÎ °æ·Î°¡ Ã³À½ÀÎÁö È®ÀÎ
+                //ì›€ì§ì¸ ê²½ë¡œê°€ ì²˜ìŒì¸ì§€ í™•ì¸
                 if(!check.contains(""+x+y+mx+my)){
                     check.add(""+x+y+mx+my);
                     check.add(""+mx+my+x+y);
